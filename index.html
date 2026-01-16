@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planner Pro</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#6366f1">
+<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body class="theme-light">
+
+<header>
+  <img src="logo.png" class="logo">
+  <h1>Planner Pro</h1>
+  <select onchange="trocarTema(this.value)">
+    <option value="light">☀️ Claro</option>
+    <option value="dark">🌙 Escuro</option>
+    <option value="color">🎨 Colorido</option>
+  </select>
+</header>
+
+<section id="planner">
+  <div class="dia" data-dia="Segunda">
+    <h2>Segunda</h2>
+    <input type="time">
+    <input type="time">
+    <textarea placeholder="Tarefas do dia"></textarea>
+  </div>
+
+  <div class="dia" data-dia="Terça">
+    <h2>Terça</h2>
+    <input type="time">
+    <input type="time">
+    <textarea></textarea>
+  </div>
+
+  <div class="dia" data-dia="Quarta">
+    <h2>Quarta</h2>
+    <input type="time">
+    <input type="time">
+    <textarea></textarea>
+  </div>
+
+  <div class="dia" data-dia="Quinta">
+    <h2>Quinta</h2>
+    <input type="time">
+    <input type="time">
+    <textarea></textarea>
+  </div>
+
+  <div class="dia" data-dia="Sexta">
+    <h2>Sexta</h2>
+    <input type="time">
+    <input type="time">
+    <textarea></textarea>
+  </div>
+
+  <div class="dia" data-dia="Sábado">
+    <h2>Sábado</h2>
+    <input type="time">
+    <input type="time">
+    <textarea></textarea>
+  </div>
+
+  <div class="dia" data-dia="Domingo">
+    <h2>Domingo</h2>
+    <input type="time">
+    <input type="time">
+    <textarea></textarea>
+  </div>
+</section>
+
+<section class="grafico">
+  <h2>📊 Produtividade</h2>
+  <canvas id="chart"></canvas>
+</section>
+
+<footer>
+  <button onclick="salvarSemana()">💾 Salvar Semana</button>
+  <button onclick="gerarPDF()">📄 PDF</button>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
