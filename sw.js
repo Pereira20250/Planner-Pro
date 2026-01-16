@@ -5,8 +5,10 @@ self.addEventListener("install", e => {
         "./",
         "./index.html",
         "./style.css",
-        "./app.js"
+        "./app.js",
+        "./manifest.js"
       ]);
     })
   );
 });
+
